@@ -1,4 +1,3 @@
-# Django
 from django.contrib import admin
 from django.urls import path, include
 
@@ -15,5 +14,4 @@ router.register(r'email/message/', EmailMessageViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),
 ]

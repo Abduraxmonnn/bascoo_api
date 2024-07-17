@@ -9,6 +9,7 @@ from rest_framework import routers
 
 # Project
 from main.views import ProductViewSet, ContactViewSet, EmailMessageViewSet
+from config.yasg import urlpatterns as doc_urls
 
 router = routers.DefaultRouter()
 router.register(r'product', ProductViewSet)
@@ -20,6 +21,8 @@ urlpatterns = [
 
     path('', include(router.urls))
 ]
+
+urlpatterns += doc_urls
 
 urlpatterns += tuple(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))
 urlpatterns += tuple(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))

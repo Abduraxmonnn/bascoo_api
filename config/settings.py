@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django_filters',
     'django_crontab',
     'corsheaders',
-    # 'drf_yasg',
+    'drf_yasg',
 
     'main'
 ]

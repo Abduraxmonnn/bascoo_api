@@ -7,7 +7,7 @@ from rest_framework.response import Response
 
 # Project
 from main.models import Product, Contact, EmailMessage
-from main.serializers import ProductSerializer, ContactSerializer, EmailMessageSerializer, UserSerializer
+from main.serializers import ProductSerializer, ContactSerializer, EmailMessageSerializer
 
 
 # Create your views here.

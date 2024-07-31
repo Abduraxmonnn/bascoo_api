@@ -6,9 +6,10 @@ from django.urls import path, include
 
 # Rest-Framework
 from rest_framework import routers
+from rest_framework.authtoken.views import obtain_auth_token
 
 # Project
-from main.views import ProductViewSet, ContactViewSet, EmailMessageViewSet
+from main.views import ProductViewSet, ContactViewSet, EmailMessageViewSet, LoginAPIView
 from config.yasg import urlpatterns as doc_urls
 
 router = routers.DefaultRouter()
@@ -18,6 +19,9 @@ router.register(r'email/message/', EmailMessageViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('auth/', obtain_auth_token, name='auth'),
+    path('login/', LoginAPIView.as_view()),
 
     path('', include(router.urls))
 ]

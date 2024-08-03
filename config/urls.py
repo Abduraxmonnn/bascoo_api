@@ -15,7 +15,7 @@ from config.yasg import urlpatterns as doc_urls
 router = routers.DefaultRouter()
 router.register(r'product', ProductViewSet)
 router.register(r'contact', ContactViewSet)
-router.register(r'email/message/', EmailMessageViewSet)
+router.register(r'email/message', EmailMessageViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

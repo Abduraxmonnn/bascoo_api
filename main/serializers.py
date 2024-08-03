@@ -1,4 +1,6 @@
 # Rest-Framework
+import asyncio
+
 from rest_framework import serializers
 
 # Project
@@ -25,5 +27,5 @@ class EmailMessageSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         created = EmailMessage.objects.create(**validated_data)
-        send_msg_to_group(validated_data, created)
+        asyncio.run(send_msg_to_group(validated_data, created))
         return created

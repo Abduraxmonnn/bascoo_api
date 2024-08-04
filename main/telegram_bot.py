@@ -35,12 +35,12 @@ async def send_msg_to_group(data: dict, obj: EmailMessage):
         tashkent_time = obj.created_date.astimezone(tashkent_tz)
         formatted_date = tashkent_time.strftime("%d:%m:%Y %H:%M:%S")
         msg = (f"✅Статус: Успешно\n\n "
-               f"№ Сообщения: {obj.id}\n"
+               f"📩№ Сообщения: {obj.id}\n"
                f"⏱Время: {formatted_date}\n\n"
-               f"Названия: {data['name']}\n\n"
-               f"Отправитель:  {data['sender']}\n\n"
-               f"Тема: {data['subject']}\n\n"
-               f"Сообщения: {data['message']}\n\n")
+               f"📌Названия: {data['name']}\n\n"
+               f"👤Отправитель:  {data['sender']}\n\n"
+               f"💌Тема: {data['subject']}\n\n"
+               f"📄Сообщения: {data['message']}\n\n")
 
         bot = telegram.Bot(token=TOKEN)
         chat_ids = get_group_chat_ids()

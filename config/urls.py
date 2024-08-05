@@ -23,6 +23,7 @@ urlpatterns = [
     path('auth/', obtain_auth_token, name='auth'),
     path('login/', LoginAPIView.as_view()),
 
+    path('', include('admin_soft.urls')),
     path('', include(router.urls))
 ]
 

@@ -24,4 +24,3 @@ class EmailMessageAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'sender', 'subject', 'created_date']
     list_display_links = ['id', 'name', 'sender']
     search_fields = ['name', 'sender']
-

@@ -147,3 +147,4 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 LOGIN_REDIRECT_URL = '/'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
